@@ -1,0 +1,497 @@
+<?xml version='1.0'?>
+<SmsSettings version="1.1">
+ <Automation>
+  <Events>
+   <Event Source="GPIO" Name="On Input 1 Up"/>
+   <Event Source="GPIO" Name="On Input 2 Up">
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Stop"/>
+   </Event>
+   <Event Source="GPIO" Name="On Input 3 Up">
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Pause"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Lamp On">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp On"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Lamp Off">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp Off"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Close Dowser">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Close Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Open Dowser">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Open Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="HDMI_A">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="HDMI_A"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="HDMI_B">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="HDMI_B"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="HDMI_AB_DUALLINK">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="HDMI_AB_DualLink"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="SMPTE_292_A">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="SMPTE_292_A"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="SMPTE_292_B">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="SMPTE_292_B"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="SMPTE_292_DUALLINK">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="SMPTE_292_DUALLINK"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Lights100">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightOn"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights100"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Lights50">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightOn"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights50"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Lights25">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightOn"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights25"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="LightsOff">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="LedOff">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LedOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="LedRed">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LedRed"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="LedGreen">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LedGreen"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="LedBlue">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LedBlue"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="DoorOpen">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="DoorClose">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="TERMINATE ALL SERVICES">
+    <Action Target="PROJECTOR" DelayInMilliseconds="2" Name="Turn Lamp Off"/>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights100"/>
+    </Action>
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Stop"/>
+    <Action Target="PLAYER" DelayInMilliseconds="1" Name="Clear"/>
+   </Event>
+   <Event Source="USER_CUE" Name="FIRE">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights100"/>
+    </Action>
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Pause">
+     <Parameter Name="Duration in Minutes" Value="0"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="RECOVER SHOW">
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Recover And Play"/>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="PLAYER" Name="On Show End">
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Clear"/>
+   </Event>
+   <Event Source="USER_CUE" Name="FLAT">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="SCOPE">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="SCOPE"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="3DFLAT">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="3DFLAT"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="3DSCOPE">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="3DSCOPE"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="NoseLightOn">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightOn"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="NoseLightOff">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="51 ATMOS">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="71 ATMOS">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="ADV VOLUME">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 37"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="FRT VOLUME">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 60"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="FRT VOLUME BABY">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 36"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Mute">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.mute 1"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="TRL VOLUME">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 50"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Unmute">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.mute 0"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Credits">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightsOn"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="lights25"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="2" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+   </Event>
+   <Event Source="Jnior" Name="On Input 1 Down">
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Pause">
+     <Parameter Name="Duration in Minutes" Value="0"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights100"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Projector">
+    <Action Target="PLAYER" DelayInMilliseconds="0" Name="Pause">
+     <Parameter Name="Duration in Minutes" Value="0"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="FRT VOLUME BARN">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 50"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="ADV VOLUME SENSITIVE">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 38"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="TRL VOLUME SENSITIVE">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 40"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Preshow">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp On"/>
+    <Action Target="Audio" DelayInMilliseconds="1" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="2" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights25"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="4" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 37"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="5" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="6" Name="Open Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Preshow Baby">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp On"/>
+    <Action Target="Audio" DelayInMilliseconds="1" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="2" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights25"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="4" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 30"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="5" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="6" Name="Open Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Preshow Barn">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp On"/>
+    <Action Target="Audio" DelayInMilliseconds="1" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="2" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights25"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="4" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 38"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="5" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="6" Name="Open Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Preshow Senior">
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Turn Lamp On"/>
+    <Action Target="Audio" DelayInMilliseconds="1" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.input_mode dig_1"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="2" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights25"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="4" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 38"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="5" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+    <Action Target="PROJECTOR" DelayInMilliseconds="6" Name="Open Dowser"/>
+   </Event>
+   <Event Source="USER_CUE" Name="Trailer">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 50"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Trailer Baby">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 35"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Trailer Barn">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 45"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Trailer Senior">
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 45"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Feature">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 60"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LightsOff"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Feature Baby">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 36"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Feature Barn">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 50"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LightsOff"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Feature Senior">
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorClose"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="0" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 50"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="LightsOff"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="NoseLightsOff"/>
+    </Action>
+   </Event>
+   <Event Source="USER_CUE" Name="Terminate Show">
+    <Action Target="PROJECTOR" DelayInMilliseconds="4" Name="Turn Lamp Off"/>
+    <Action Target="PROJECTOR" DelayInMilliseconds="0" Name="Execute Macro">
+     <Parameter Value="FLAT"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="1" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="Lights50"/>
+    </Action>
+    <Action Target="Audio" DelayInMilliseconds="2" Name="Send Text">
+     <Parameter Name="Text" Value="cp750.sys.fader 37"/>
+    </Action>
+    <Action Target="Jnior" DelayInMilliseconds="3" Name="Execute Macro">
+     <Parameter Name="JNIOR Macro" Value="DoorOpen"/>
+    </Action>
+   </Event>
+  </Events>
+  <Groups>
+   <Group CanBeTriggeredManually="true" CanBeInsertedInSpl="true" Icon="0" Name="Projector" SplBehavior="PUNCTUAL">
+    <Cue Icon="projectorLampOn" Name="Lamp On"/>
+    <Cue Icon="projectorLampOff" Name="Lamp Off"/>
+    <Cue Icon="projectorDowserClose" Name="Close Dowser"/>
+    <Cue Icon="projectorDowserOpen" Name="Open Dowser"/>
+    <Cue Icon="projector" Name="HDMI_A"/>
+    <Cue Icon="projector" Name="HDMI_B"/>
+    <Cue Icon="projector" Name="HDMI_AB_DUALLINK"/>
+    <Cue Icon="projector" Name="SMPTE_292_A"/>
+    <Cue Icon="projector" Name="SMPTE_292_B"/>
+    <Cue Icon="projector" Name="SMPTE_292_DUALLINK"/>
+    <Cue Icon="projector" Name="FLAT"/>
+    <Cue Icon="projector" Name="SCOPE"/>
+    <Cue Icon="projector" Name="3DFLAT"/>
+    <Cue Icon="projector" Name="3DSCOPE"/>
+    <Cue Icon="btnPause" Name="Projector"/>
+   </Group>
+   <Group CanBeTriggeredManually="true" CanBeInsertedInSpl="true" Icon="1" Name="Audiotorium" SplBehavior="PUNCTUAL">
+    <Cue Icon="light100" Name="Lights100"/>
+    <Cue Icon="light050" Name="Lights50"/>
+    <Cue Icon="light025" Name="Lights25"/>
+    <Cue Icon="light000" Name="LightsOff"/>
+    <Cue Icon="light000" Name="LedOff"/>
+    <Cue Icon="light075" Name="LedRed"/>
+    <Cue Icon="light075" Name="LedGreen"/>
+    <Cue Icon="light075" Name="LedBlue"/>
+    <Cue Icon="doorOpen" Name="DoorOpen"/>
+    <Cue Icon="doorClose" Name="DoorClose"/>
+    <Cue Icon="light075" Name="NoseLightOn"/>
+    <Cue Icon="light075" Name="NoseLightOff"/>
+    <Cue Icon="pulse" Name="Credits"/>
+   </Group>
+   <Group CanBeTriggeredManually="true" CanBeInsertedInSpl="true" Icon="2" Name="Emergency" SplBehavior="PUNCTUAL">
+    <Cue Icon="emergencyStop" Name="TERMINATE ALL SERVICES"/>
+    <Cue Icon="emergencyStop" Name="FIRE"/>
+    <Cue Icon="emergencyStop" Name="RECOVER SHOW"/>
+   </Group>
+   <Group CanBeTriggeredManually="true" CanBeInsertedInSpl="true" Icon="2" Name="Audio" SplBehavior="PUNCTUAL">
+    <Cue Icon="sound" Name="51 ATMOS"/>
+    <Cue Icon="sound" Name="71 ATMOS"/>
+    <Cue Icon="sound2" Name="ADV VOLUME"/>
+    <Cue Icon="sound2" Name="FRT VOLUME"/>
+    <Cue Icon="sound" Name="FRT VOLUME BABY"/>
+    <Cue Icon="sound2Off" Name="Mute"/>
+    <Cue Icon="sound2" Name="TRL VOLUME"/>
+    <Cue Icon="sound2" Name="Unmute"/>
+    <Cue Icon="sound" Name="FRT VOLUME BARN"/>
+    <Cue Icon="sound" Name="ADV VOLUME SENSITIVE"/>
+    <Cue Icon="sound" Name="TRL VOLUME SENSITIVE"/>
+   </Group>
+   <Group CanBeTriggeredManually="false" CanBeInsertedInSpl="true" Icon="4" Name="Show States" SplBehavior="PUNCTUAL">
+    <Cue Icon="Automation" Name="Preshow"/>
+	<Cue Icon="Automation" Name="Preshow Baby"/>
+	<Cue Icon="Automation" Name="Preshow Barn"/>
+	<Cue Icon="Automation" Name="Preshow Senior"/>
+    <Cue Icon="Automation" Name="Trailer"/>
+	<Cue Icon="Automation" Name="Trailer Baby"/>
+	<Cue Icon="Automation" Name="Trailer Barn"/>
+	<Cue Icon="Automation" Name="Trailer Senior"/>
+    <Cue Icon="Automation" Name="Feature"/>
+	<Cue Icon="Automation" Name="Feature Baby"/>
+	<Cue Icon="Automation" Name="Feature Barn"/>
+	<Cue Icon="Automation" Name="Feature Senior"/>
+    <Cue Icon="Automation" Name="Terminate Show"/>
+   </Group>
+  </Groups>
+  <Devices>
+   <Device Type="JNIOR" Name="Jnior" IsEnabled="true">
+    <DeviceSettings Hostname="10.6.125.80" Port="9200"/>
+   </Device>
+   <Device Type="TCP" Name="Audio" IsEnabled="true">
+    <DeviceSettings Hostname="10.6.125.60" Port="61408"/>
+   </Device>
+  </Devices>
+ </Automation>
+</SmsSettings>
