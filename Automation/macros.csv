@@ -1,0 +1,22 @@
+Revision,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Date,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Comment,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Output,Output,Output,Output,Output,Output,Output,Output,Input,Input,Input,Input,Input,Input,Input,Input,DoorClose,DoorOpen,NoseLightOn,NoseLightOff
+Description,Lights100,Lights50,Lights25,LightsOff,LedOff,LedBlue,LedGreen,LedRed,9,10,11,12,13,14,15,16,1,2,3,4,5,6,7,8,(ROUT_9),(ROUT_9),(ROUT_12),(ROUT_12)
+Device,ROUT 1,ROUT 2,ROUT 3,ROUT 4,ROUT 5,ROUT 6,ROUT 7,ROUT 8,ROUT 9,ROUT 10,ROUT 11,ROUT 12,ROUT 13,ROUT 14,ROUT 15,ROUT 16,DIN 1,DIN 2,DIN 3,DIN 4,DIN 5,DIN 6,DIN 7,DIN 8,ROUT 9,ROUT 9,ROUT 12,ROUT 12
+Action,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,CP,SP,SP,SP,SP,SP,SP,SP,SP,O,C,C,O
+Data,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,,,,
+Macro Name,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lights100,0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lights50,,0,,,,,,,,,,,,,,,,,,,,,,,,,,
+Lights25,,,0,,,,,,,,,,,,,,,,,,,,,,,,,
+LightsOff,,,,0,,,,,,,,,,,,,,,,,,,,,,,,
+LedOff,,,,,0,,,,,,,,,,,,,,,,,,,,,,,
+LedBlue,,,,,0,,,,,,,,,,,,,,,,,,,,,,,
+LedGreen,,,,,,,0,,,,,,,,,,,,,,,,,,,,,
+LedRed,,,,,,,,0,,,,,,,,,,,,,,,,,,,,
+DoorClose,,,,,,,,,,,,,,,,,,,,,,,,,0,,,
+DoorOpen,,,,,,,,,,,,,,,,,,,,,,,,,,0,,
+NoseLightOn,,,,,,,,,,,,,,,,,,,,,,,,,,,0,
+NoseLightOff,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
